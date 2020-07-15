@@ -1,0 +1,13 @@
+.nav-wrapper img {
+    width: 65px;
+    margin-left: 20px;
+}
+.nav-wrapper .brand-logo {
+    margin-left: 100px;
+}
+
+.navbar-fa-icons {
+    font-size: 1.5rem;
+    color: cadetblue;
+    margin-right: 5px;
+}

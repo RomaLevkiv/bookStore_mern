@@ -1,0 +1,12 @@
+.card-title{
+    color: orange;
+} 
+
+.total-price {
+    color: gold;
+    text-align: right;
+}
+
+.card-order {
+    width: 50%;
+}

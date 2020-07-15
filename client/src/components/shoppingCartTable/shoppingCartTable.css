@@ -1,0 +1,26 @@
+.shopping-cart-table .total {
+    text-align: right;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.shopping-cart-table button{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.btn-success {
+    background-color: #74882A !important
+}
+
+.btn-warning {
+    background-color: #C4A93E !important;
+}
+
+.btn-danger {
+    background-color: #942A1E !important;
+}
+
+.btn-order {
+    background-color: #01579B !important;
+}

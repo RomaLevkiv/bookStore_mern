@@ -1,0 +1,37 @@
+{
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "mern-stack",
+  "main": "api/start.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node api/start.js",
+    "build": "cd client && npm run build",
+    "client-install": "cd client && npm install",
+    "heroku-postbuild": "npm run build && npm run client-install",
+    "server": "nodemon api/start.js",
+    "client": "npm run start --prefix client",
+    "client-build": "npm build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "Roman",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.2.0",
+    "config": "^3.3.1",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.15",
+    "moongoose": "0.0.5",
+    "morgan": "^1.10.0",
+    "uuid": "^8.2.0"
+  }
+}
