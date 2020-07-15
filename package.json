@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=production node api/start.js",
     "build": "cd client && npm run build",
     "client-install": "cd client && npm install",
-    "heroku-postbuild": "npm run build && npm run client-install",
+    "heroku-postbuild": "npm run client-install",
     "server": "nodemon api/start.js",
     "client": "npm run start --prefix client",
     "client-build": "npm build --prefix client",
