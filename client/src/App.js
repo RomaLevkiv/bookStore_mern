@@ -3,6 +3,7 @@ import { Routes } from './route/route'
 import { connect } from 'react-redux'
 import { setToken } from './redux/actions'
 import Navbar from './components/navbar/navbar'
+import BurgerMenu from "./components/burgerMenu/burgerMenu"
 import 'materialize-css'
 
 
@@ -19,6 +20,9 @@ function App({ setToken, token, fetchData }) {
     <div>
       {
         !!token ? <Navbar /> : null
+      }
+      {
+        !!token ? <BurgerMenu/> : null
       }
       <div className="container">
         {routes}

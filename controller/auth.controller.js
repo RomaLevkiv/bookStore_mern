@@ -119,7 +119,7 @@ class AuthController {
         const candidate = await userModel.findUserByEmail(email)
         if(!candidate) {
             return res.status(400)
-                        .json({message: "such user isn't exist"})
+                        .json({message: "such user doesn't exist"})
         }
         if(candidate.tokenVerify) {
             return res.status(400)

@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import book_icon from '../../img/book.png' 
-import { logout, cartReset, fetchData} from '../../redux/actions'
+import { fetchData } from '../../redux/actions'
 import './navbar.css'
 import ShopHeader from '../shopHeader/shopHeader'
+import Logout from '../logout/logout'
 
-const Navbar = ({ logout, cartReset, fetchData }) => {
-  const history = useHistory()
-  const onLogout = async (e) => {
-    e.preventDefault()
-    cartReset()
-    logout()
-    history.push('/auth')
-  }
+const Navbar = ({ fetchData }) => {
+  
 
   useEffect(() => {
     fetchData("/books")
-    fetchData("/getCart")
+    .then(() => {
+      fetchData("/getCart")
+    })
+    
   },[])
 
   return (
@@ -30,7 +28,7 @@ const Navbar = ({ logout, cartReset, fetchData }) => {
           <li><NavLink to="/books"> <i className="navbar-fa-icons fa fa-book"/> Books</NavLink></li>
           <li><NavLink to="/create_book"><i className="navbar-fa-icons fa fa-pencil-square-o"/> Create book</NavLink></li>
           <li><NavLink to="/orders"><i className="navbar-fa-icons fa fa-building"/> Orders</NavLink></li>
-          <li><a to="/logout" onClick={onLogout}> <i className="navbar-fa-icons fa fa-sign-out"/> Logout</a></li>
+          <li><Logout/></li>
         </ul>
       </div>
     </nav>
@@ -45,4 +43,4 @@ const mapStateToProps = ({ shoppingCart: { cartItems, orderTotal } }) => {
 }
 
 
-export default connect(mapStateToProps, { logout, cartReset, fetchData })(Navbar)
+export default connect(mapStateToProps, { fetchData })(Navbar)

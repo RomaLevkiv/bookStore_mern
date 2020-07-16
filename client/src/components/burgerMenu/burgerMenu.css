@@ -1,0 +1,38 @@
+.burger {
+    position: fixed;
+    font-size: 20px;
+    top: 10%;
+    left: 1%;
+    cursor: pointer;
+    transition: opacity, left .22s ease-in;
+    z-index: 100;
+}
+
+.burger:hover{
+    opacity: .7;
+}
+
+.burger.openBM {
+ left: 15rem;
+ color: red;
+}
+
+
+
+.menu-items {
+ position: fixed; 
+ top: 13%;  
+ left: 1%;
+ background-color: #37474F;
+ color: aliceblue !important;
+ width: 14rem;
+ padding: 1%;
+ border-radius: 7px;
+ transition: transform .22s ease-in;
+ z-index: 90;
+}
+
+.menu-items.closeM {
+    transform: translateX(-20rem);
+    
+}

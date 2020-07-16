@@ -46,7 +46,7 @@ const BookCreator = (props) => {
 
     return (
         <div className="row">
-            <div className="col s6 offset-s3">
+            <div className="col s6 offset-s1">
                 <h3>Add book to data base</h3>
                 <div className="card blue-grey darken-1">
                     <div className="card-content white-text">
