@@ -38,11 +38,11 @@ const AuthPage = (props) => {
     }
     return (
         <div className="row">
-            <div className="col s6 offset-s2">
-                <h1>Sign in or register</h1>
+            <div className="col s12 offset-s2">
+                <h2>Sign in or register</h2>
                 <div className="card blue-grey darken-1 card-register">
                     <div className="card-content white-text">
-                    <span className="card-title">Sign in / Sign up</span>
+                    <span className="card-title sign">Sign in/Sign up</span>
                         <div>
                             <Input 
                                 fieldValue="email" 

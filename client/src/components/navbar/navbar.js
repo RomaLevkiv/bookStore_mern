@@ -21,7 +21,7 @@ const Navbar = ({ fetchData }) => {
   return (
     <nav>
       <div className="nav-wrapper  blue-grey darken-3">
-        <span href="#" className="brand-logo">Book Store</span>
+        <span href="#" className="brand-logo">BStore</span>
         <img src={book_icon} alt="book_icon" />
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><ShopHeader /></li>

@@ -1,7 +1,7 @@
 .burger {
     position: fixed;
     font-size: 20px;
-    top: 10%;
+    top: 13%;
     left: 1%;
     cursor: pointer;
     transition: opacity, left .22s ease-in;
@@ -21,7 +21,7 @@
 
 .menu-items {
  position: fixed; 
- top: 13%;  
+ top: 15%;  
  left: 1%;
  background-color: #37474F;
  color: aliceblue !important;
