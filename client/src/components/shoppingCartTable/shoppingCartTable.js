@@ -6,9 +6,9 @@ import "./shoppingCartTable.css"
 class ShoppingCartTable extends React.Component {
 
 
-    componentDidMount() {
-        this.props.fetchData("/getCart")
-    }
+    // componentDidMount() {
+    //     this.props.fetchData("/getCart")
+    // }
 
     componentDidUpdate(prevProps) {
         if (prevProps.items !== this.props.items) {

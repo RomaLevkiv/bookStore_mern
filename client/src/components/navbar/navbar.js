@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import book_icon from '../../img/book.png' 
@@ -6,7 +6,7 @@ import { logout, cartReset, fetchData} from '../../redux/actions'
 import './navbar.css'
 import ShopHeader from '../shopHeader/shopHeader'
 
-const Navbar = ({logout, cartReset, items}) => {
+const Navbar = ({ logout, cartReset, fetchData }) => {
   const history = useHistory()
   const onLogout = async (e) => {
     e.preventDefault()
@@ -14,6 +14,11 @@ const Navbar = ({logout, cartReset, items}) => {
     logout()
     history.push('/auth')
   }
+
+  useEffect(() => {
+    fetchData("/books")
+    fetchData("/getCart")
+  },[])
 
   return (
     <nav>

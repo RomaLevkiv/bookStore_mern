@@ -30,9 +30,6 @@ class AppServer {
         this.server.use(express.urlencoded())
         this.server.use(express.json({ extended: true }))
         this.server.use(morgan('dev'))
-        // if(process.env.NODE_ENV === "production") {
-        //     this.server.use(express.static(path.join(__dirname, "client", "build")))
-        // }
     }
 
     initRoutes() {

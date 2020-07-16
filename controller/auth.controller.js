@@ -18,7 +18,7 @@ class AuthController {
         try {
             const userRules = Joi.object({
                 email: Joi.string().required().email(),
-                password: Joi.string().required().length(6)
+                password: Joi.string().required().min(6)
             })
             const validationResult = Joi.validate(req.body, userRules)
             
